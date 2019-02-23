@@ -1,0 +1,51 @@
+﻿//searching an item in an array
+
+org 100
+load addr
+store next
+input
+store searchitem
+clear
+loop, load searchitem
+addI next 				
+skipcond 400
+jump subtraction
+halt
+
+subtraction, clear
+loadI next
+subt searchitem
+skipcond 400
+jump increment
+halt
+
+increment, clear
+load next  //increasing address of next
+add one
+store next
+
+load count //decreasing the count
+subt one
+store count
+skipcond 400
+jump loop
+load end
+output
+
+
+searchitem, dec 0
+addr, hex 121
+next, hex 0
+count, dec 10 
+one, dec 1
+end, dec -1111
+dec 12
+dec 89
+dec -89
+dec -74
+dec -10
+dec 16
+dec -48
+dec -9
+dec 5
+dec 36
