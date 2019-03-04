@@ -1,0 +1,27 @@
+﻿//multiplication
+input 
+store x
+input 
+subt one 
+store y
+
+load x
+store sum
+
+loop, load sum
+add x
+store sum
+
+load y
+subt one
+store y
+skipcond 400
+jump loop
+load sum
+output
+halt
+
+x, dec 0
+y, dec 0
+sum, dec 0
+one, dec 1

@@ -1,0 +1,47 @@
+//infinite loop
+
+input 
+store x
+input 
+store y
+INPUT
+STORE n
+input 
+store z
+
+while, load x
+subt y
+SKIPCOND 800
+halt
+
+//for loop
+//setting i=x
+load i
+add x
+store i
+clear
+a, load i
+subt n
+skipcond 000
+jump end
+load z
+add i
+store z
+output
+
+load i
+add one
+store i
+jump a
+
+
+
+end, clear
+jump while
+
+x, dec 0
+y, dec 0
+z, dec 0
+n, dec 0
+i, dec 0
+one, dec 1

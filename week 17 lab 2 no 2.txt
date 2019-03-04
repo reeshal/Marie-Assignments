@@ -1,0 +1,35 @@
+﻿//week 17 lab 2 no 2.
+
+load addrToArray
+store pointerToArray  // storing the address of the first element of the array
+
+loop, load sum
+addi pointerToArray
+store sum
+
+load pointerToArray	//incrementing the address of the next element int the array
+add one
+store pointerToArray
+
+load count //decreasing the count
+subt one
+store count
+skipcond 400
+jump loop
+load sum
+output
+
+
+
+addrToArray, hex 014
+pointerToArray, hex 0
+sum, dec 0
+count, dec 7
+one, dec 1
+dec 10
+dec 20
+dec 30
+dec 40
+dec 50
+dec 55
+dec 65

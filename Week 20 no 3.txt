@@ -1,0 +1,20 @@
+﻿loop, load sum
+add i
+store sum
+load i
+add one
+store i
+
+load counter
+subt one
+store counter
+skipcond 000
+jump loop
+load sum
+output
+halt
+
+sum, dec 0
+one, dec 1
+i, dec 0
+counter, dec 9

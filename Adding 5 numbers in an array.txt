@@ -1,0 +1,31 @@
+//making a loop to add 5 numbers
+org 100
+load addr
+store next
+clear
+loop, load sum
+addi next
+store sum
+load next
+add one
+store next
+load count
+subt one
+store count
+skipcond 000
+jump loop
+load sum
+output
+halt
+
+
+addr, hex 116
+next, hex 0
+count, dec 4
+sum, dec 0
+one, dec 1
+dec 10
+dec 15
+dec 20
+dec 5
+dec 5

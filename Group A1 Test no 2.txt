@@ -1,0 +1,25 @@
+﻿loop, input 
+store x
+skipcond 400
+jump positive
+load sumpositive
+output
+load sumnegative
+output
+halt
+
+positive, skipcond 800
+jump negative
+load sumpositive
+add x
+store sumpositive
+jump loop
+
+negative, load sumnegative
+add x
+store sumnegative
+jump loop
+
+x, dec 0
+sumpositive, dec 0
+sumnegative, dec 0

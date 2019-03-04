@@ -1,0 +1,63 @@
+﻿//(a*b)+(c*d) with loop input 0 to stop
+mainloop,input 
+store a
+input 
+store b
+input 
+store c
+input 
+store d
+
+//to set ab and cd back to 0 each time
+load ab
+subt ab
+store ab
+load cd
+subt cd
+store cd
+
+load b
+store count
+
+loopab, load ab
+add a
+store ab
+load count
+subt one
+store count
+skipcond 400
+jump loopab
+jump loopcd
+
+loopcd, load d
+store count
+loopcds, load cd
+add c
+store cd
+load count
+subt one
+store count
+skipcond 400
+jump loopcds
+jump addition
+
+addition, load ab
+add cd
+store result
+output
+
+input
+skipcond 400
+jump mainloop
+halt
+
+one, dec 1
+a, dec 0
+b, dec 0
+c, dec 0
+d, dec 0
+ab, dec 0
+cd, dec 0
+count, dec 0
+result, dec 0
+

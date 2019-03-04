@@ -1,0 +1,42 @@
+INPUT
+STORE x
+INPUT
+STORE y
+INPUT
+STORE z
+LOAD x
+SUBT y
+SUBT z
+SKIPCOND 400
+JUMP greater
+LOAD x
+SUBT y
+//STORE x
+OUTPUT
+LOAD z
+ADD one
+//STORE z
+OUTPUT
+HALT
+
+greater, SKIPCOND 800
+JUMP else
+LOAD x
+SUBT y
+//STORE x
+output
+LOAD z
+ADD one
+//STORE z
+OUTPUT
+HALT
+
+else, LOAD y
+SUBT one
+//STORE y
+OUTPUT 
+
+x, dec 0
+y, dec 0
+z, dec 0
+one, dec 1

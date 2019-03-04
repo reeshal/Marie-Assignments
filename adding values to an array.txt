@@ -1,0 +1,25 @@
+﻿//adding values to an array
+load addr
+store next
+
+loop, input
+storeI next
+load next
+add one
+store next
+load count
+subt one
+store count
+skipcond 400
+jump loop
+halt
+
+addr, hex 011
+next, hex 0
+count, dec 5
+one, dec 1
+dec 0
+dec 0
+dec 0
+dec 0
+dec 0

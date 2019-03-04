@@ -1,0 +1,23 @@
+﻿//division of 2 positive numbers
+input 
+store x
+input 
+store y
+
+loop,load x
+subt y
+store x
+load count 
+add one
+store count
+load x
+skipcond 000
+jump loop
+load count
+subt one  //count will be One greater than correct amount
+output
+
+x, dec 0
+y, dec 0
+one, dec 1
+count, dec 0
